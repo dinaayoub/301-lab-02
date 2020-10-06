@@ -7,9 +7,9 @@ Estimate of time needed to complete: 30 minutes
 
 Start time: 1:10 pm
 
-Finish time: 1:48
+Finish time: 2:10 pm
 
-Actual time needed to complete: 38 minutes
+Actual time needed to complete: 60 minutes
 
 ## Feature #2 - Dina Navigator, Robert Driver
 Number and name of feature: filter images

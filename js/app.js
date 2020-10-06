@@ -1,5 +1,20 @@
 'use strict'
 
+function Photo(item) {
+    this.title = item.title;
+    this.image_url = item.image_url;
+    this.description = item.description;    
+}
+
+Photo.prototype.render = function () {
+    let $gallerySection = $('.photo-template').clone();
+    $('main').append($gallerySection);
+    $gallerySection.find('h2').text(this.title);
+    $gallerySection.find('img').attr('src',this.image_url);
+    $gallerySection.find('p').text(this.description);
+    $gallerySection.removeClass('photo-template');
+}
+
 const ajaxSettings = {
     method: 'get',
     dataType: 'json'
@@ -8,14 +23,7 @@ const ajaxSettings = {
 $.ajax('/data/page-1.json',ajaxSettings)
     .then(data => {
         data.forEach(item => {
-            let $gallerySection = $('<section></section>');
-            $gallerySection.addClass('galleryPhoto');
-            $('main').append($gallerySection);
-            let $photoTitle = $('<h1></h1>').text(item['title']);
-            $gallerySection.append($photoTitle);
-            let $photoImage = $('<img>').attr('src',item['image_url']);
-            $gallerySection.append($photoImage);
-            let $photoDescription = $('<p></p>').text(item['description']);
-            $gallerySection.append($photoDescription);
+            let photo = new Photo(item);
+            photo.render();
         });
     })
