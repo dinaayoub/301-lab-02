@@ -14,13 +14,13 @@ Actual time needed to complete: 60 minutes
 ## Feature #2 - Dina Navigator, Robert Driver
 Number and name of feature: filter images
 
-Estimate of time needed to complete: 1hr
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 2:25pm
 
-Finish time: _____
+Finish time: 4:00pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour 35 minutes
 
 ## Feature #3
 Number and name of feature: style the application
