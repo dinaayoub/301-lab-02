@@ -68,3 +68,25 @@ Start time: 3:50
 Finish time: 4:30
 
 Actual time needed to complete: 40 minutes
+
+## Feature #3 - Dina navigator, Robert driver
+Number and name of feature: sort the images
+
+Estimate of time needed to complete: 20 minutes
+
+Start time: 4:40pm
+
+Finish time: 4:50pm
+
+Actual time needed to complete: 10 minutes
+
+## Feature #4 - Robert navigator, Dina driver
+Number and name of feature: Sort the images
+
+Estimate of time needed to complete: 25 minutes
+
+Start time: 5:00pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
