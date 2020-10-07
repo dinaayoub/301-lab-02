@@ -4,14 +4,14 @@ function Photo(item) {
     this.title = item.title;
     this.image_url = item.image_url;
     this.description = item.description;
-    this.keyword = item.keyword;  
+    this.keyword = item.keyword;
 }
 
 Photo.prototype.render = function () {
     let $gallerySection = $('.photo-template').clone();
     $('main').append($gallerySection);
     $gallerySection.find('h2').text(this.title);
-    $gallerySection.find('img').attr('src',this.image_url);
+    $gallerySection.find('img').attr('src', this.image_url);
     $gallerySection.find('p').text(this.description);
     $gallerySection.removeClass('photo-template');
     $gallerySection.attr('class', this.keyword);
@@ -23,7 +23,7 @@ const ajaxSettings = {
 }
 
 
-$.ajax('data/page-1.json',ajaxSettings)
+$.ajax('data/page-1.json', ajaxSettings)
     .then(data => {
         data.forEach(item => {
             let photo = new Photo(item);
@@ -36,7 +36,7 @@ $.ajax('data/page-1.json',ajaxSettings)
 
 
 let dropDownMenu = $('select');
-dropDownMenu.on('change', function(){
+dropDownMenu.on('change', function () {
     //Code for filtering images here
     let $sections = $('section');
     $sections.hide();
