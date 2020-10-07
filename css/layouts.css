@@ -5,7 +5,6 @@ select{
     color: purple;
 }
 section{
-    float: left;
     margin-left: 4.5vw;
     margin-top: 50px;
     padding: 1vw;
@@ -18,5 +17,12 @@ section{
 }
 section > img {
     height: 150px;
+    max-width: 280px;
     margin-bottom: 1vw;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
