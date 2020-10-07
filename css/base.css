@@ -14,35 +14,11 @@ h2{
     font-weight: bold;
     margin-bottom: 1vw;
 }
-select{
-    margin-left: 50vw;
-    transform: translateX(-50%);
-    background-color: cyan;
-    color: purple;
-}
-section{
-    float: left;
-    margin-left: 4.5vw;
-    margin-top: 50px;
-    padding: 1vw;
-    height: 350px;
-    width: 300px;
-    align-content: center;
-    text-align: center;
-    border: 2px purple solid;
-    border-radius: 15%;
-}
-section > img {
-    height: 150px;
-    margin-bottom: 1vw;
-}
 footer {
     padding: 50px;
     clear: left;
 }
-.photo-template{
-    display: none;
-}
+
 body {
     background-color: peachpuff; 
 }
