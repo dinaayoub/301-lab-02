@@ -23,7 +23,7 @@ const ajaxSettings = {
 }
 
 
-$.ajax('/data/page-1.json',ajaxSettings)
+$.ajax('data/page-1.json',ajaxSettings)
     .then(data => {
         data.forEach(item => {
             let photo = new Photo(item);
