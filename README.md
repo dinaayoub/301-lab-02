@@ -61,10 +61,10 @@ Actual time needed to complete: 55 minutes
 ## Feature #2 - Robert navigator, Dina driver
 Number and name of feature: templating
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 3:50
 
-Finish time: _____
+Finish time: 4:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 40 minutes
