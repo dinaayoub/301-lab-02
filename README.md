@@ -1,4 +1,4 @@
-# 301-lab-02
+# Lab 02
 
 ## Feature #1 - Robert Navigator, Dina Driver
 Number and name of feature: Display images
@@ -35,6 +35,31 @@ Actual time needed to complete: 45 minutes
 
 ## Stretch goals
 Number and name of feature: sort the images
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+
+# Lab 03
+
+## Feature #1 - Dina navigator, Robert driver
+Number and name of feature: Pagination
+
+Estimate of time needed to complete: 45 minutes
+
+Start time: 2:40pm
+
+Finish time: 3:35pm
+
+Actual time needed to complete: 55 minutes
+
+## Feature #2 - Robert navigator, Dina driver
+Number and name of feature: templating
 
 Estimate of time needed to complete: _____
 
