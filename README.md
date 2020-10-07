@@ -22,16 +22,16 @@ Finish time: 4:00pm
 
 Actual time needed to complete: 1 hour 35 minutes
 
-## Feature #3
+## Feature #3- Robert Navigator, Dina Driver
 Number and name of feature: style the application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30min
 
-Start time: _____
+Start time: 4:15
 
-Finish time: _____
+Finish time: 5:00
 
-Actual time needed to complete: _____
+Actual time needed to complete: 45 minutes
 
 ## Stretch goals
 Number and name of feature: sort the images
