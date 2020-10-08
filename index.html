@@ -28,8 +28,14 @@
     <select id='myDropDown'>
       <option value="default">Filter by Keyword</option>
     </select>
-    <input id='pagination' class='paginationButton' type='button' value='Next Page' />
+
   </header>
+  <div>
+    <label>Sort by:</label>
+    <input id="titleRadioButton" type='radio' name='sorting' checked value="Title" /><label>Title</label>
+    <input id="hornsRadioButton" type='radio' name='sorting' value="Horns" /><label>Horns</label>
+    <input id='pagination' class='paginationButton' type='button' value='Next Page' />
+  </div>
   <main id='gallery'>
   </main>
   <footer>
