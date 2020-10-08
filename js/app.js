@@ -11,17 +11,32 @@ function renderNewPage(page) {
   $('option').not(':first-child').remove();
   page.forEach(item => {
     photos.push(new Photo(item));
-    let $option = $(`<option>${item.title}</option>`).attr('value', item.keyword);
+    let $option = $(`<option>${item.keyword}</option>`).attr('value', item.keyword);
     $dropDownMenu.append($option);
   });
-  if ($('#titleRadioButton').is(':checked'))
-  {
-    photos.sort((a,b) => {
+
+  //remove the duplicate options from the drop down (select)
+  //first, create an options array that we're going to put all the unique values in
+  var optionsArray = [];
+  //get all the select options from the page
+  $('select option').each(function () {
+    //if that option's value already exists in the array, then delete the option from the page.
+    if (optionsArray.includes(this.value)) {
+      $(this).remove();
+    }
+    else {
+      //otherwise, this option isn't in the array, so add it and leave the option on the page alone
+      optionsArray.push(this.value);
+    }
+  });
+
+  if ($('#titleRadioButton').is(':checked')) {
+    photos.sort((a, b) => {
       return (a['title'] > b['title'] ? 1 : -1);
     });
   }
   else {
-    photos.sort((a,b) => {
+    photos.sort((a, b) => {
       return a['horns'] - b['horns'];
     })
   }
