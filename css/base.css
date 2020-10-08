@@ -1,6 +1,6 @@
 header{
     width: 100vw;
-    height: 100px;
+    height: 130px;
     background: pink;
 }
 h1{
@@ -24,4 +24,9 @@ body {
 }
 p{
     font: 14pt Poppins, sans-serif;
+}
+div{
+    padding: 15px;
+    margin: auto;
+    width: 70%;
 }

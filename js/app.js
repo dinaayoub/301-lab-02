@@ -5,15 +5,29 @@ let $dropDownMenu = $('select');
 let templateId = '.photo-template';
 let photos = [];
 
-function renderNewPage(page){
+function renderNewPage(page) {
+  photos.splice(0, photos.length);
+  $('section').remove();
+  $('option').not(':first-child').remove();
   page.forEach(item => {
-      photos.push(new Photo(item));
-      let $option = $(`<option>${item.title}</option>`).attr('value', item.keyword);
-      $dropDownMenu.append($option);
+    photos.push(new Photo(item));
+    let $option = $(`<option>${item.title}</option>`).attr('value', item.keyword);
+    $dropDownMenu.append($option);
+  });
+  if ($('#titleRadioButton').is(':checked'))
+  {
+    photos.sort((a,b) => {
+      return (a['title'] > b['title'] ? 1 : -1);
     });
-    photos.forEach(photo => {
-      $('#gallery').append(photo.toHtml())
-    });
+  }
+  else {
+    photos.sort((a,b) => {
+      return a['horns'] - b['horns'];
+    })
+  }
+  photos.forEach(photo => {
+    $('#gallery').append(photo.toHtml())
+  });
 }
 
 function Photo(rawDataObject) {
@@ -42,14 +56,12 @@ Photo.prototype.toHtml = function () {
 renderNewPage(page1);
 
 $paginationButton.on('click', () => {
-  photos.splice(0, photos.length);
-  $paginationButton.attr('value', 'Previous Page');
-  $('section').remove();
-  $('option').not(':first-child').remove();
   if ($paginationButton.attr('value') === 'Next Page') {
     renderNewPage(page2);
+    $paginationButton.attr('value', 'Previous Page');
   } else {
     renderNewPage(page1);
+    $paginationButton.attr('value', 'Next Page');
   }
 });
 
@@ -62,5 +74,13 @@ $dropDownMenu.on('change', function () {
     $('section').show();
   } else {
     $(`.${title}`).show();
+  }
+});
+
+$('input:radio').on('change', () => {
+  if ($paginationButton.attr('value') === 'Next Page') {
+    renderNewPage(page1);
+  } else {
+    renderNewPage(page2);
   }
 });
