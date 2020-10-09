@@ -12,7 +12,15 @@ function renderNewPage(page) {
   page.forEach(item => {
     photos.push(new Photo(item));
     let $option = $(`<option>${item.keyword}</option>`).attr('value', item.keyword);
-    $dropDownMenu.append($option);
+    let optionExists = false;
+    for (let i = 0; i < $dropDownMenu.children().length; i++){
+      if ($dropDownMenu.children()[i].label == item.keyword){
+        optionExists = true;
+      }
+    }
+    if (optionExists == false){
+      $dropDownMenu.append($option);
+    }
   });
 
   //remove the duplicate options from the drop down (select)
@@ -93,9 +101,12 @@ $dropDownMenu.on('change', function () {
 });
 
 $('input:radio').on('change', () => {
+  let selection = $dropDownMenu[0].selectedIndex;
   if ($paginationButton.attr('value') === 'Next Page') {
     renderNewPage(page1);
   } else {
     renderNewPage(page2);
   }
+  $dropDownMenu[0].selectedIndex = selection;
+  $dropDownMenu.trigger('change');
 });
